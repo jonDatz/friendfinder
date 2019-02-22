@@ -1,8 +1,8 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
-require("./app/routing/htmlRoutes")(app);
-require("./app/routing/apiRoutes")(app);
+let htmlRoutes = require('./app/routing/htmlRoutes');
+let apiRoutes = require('./app/routing/apiRoutes');
 
 // Sets up the Express App
 var app = express();
@@ -14,8 +14,8 @@ app.use(express.json());
 
 
 
-// htmlRoutes(app);
-// apiRoutes(app);
+htmlRoutes(app);
+apiRoutes(app);
 
 
 // Starts the server to begin listening
